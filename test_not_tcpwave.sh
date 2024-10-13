@@ -21,7 +21,7 @@ function test_bandwidth() {
 }
 
 function test_packet_loss() {
-  echo "Тестирование потерь пакетов без TCP Wave..."
+  echo "Тестирование потерь пакетов без TCP Wave."
   PACKET_LOSS=$(ping -c 10 8.8.8.8 | grep -oP '\d+% packet loss')
   echo "Потери пакетов: ${PACKET_LOSS}"
   echo "Проблемы с пропускной способностью на высоких нагрузках."
