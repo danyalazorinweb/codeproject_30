@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function test_latency() {
-  echo "Тестирование задержки с TCP Wave..."
+  echo "Тестирование задержки с TCP Wave."
   LATENCY=$(ping -c 4 8.8.8.8 | tail -1 | awk '{print $4}' | cut -d '/' -f 2)
   echo "Средняя задержка: ${LATENCY}ms"
   echo "Максимальная задержка: $(ping -c 4 8.8.8.8 | head -2 | tail -1 | awk '{print $7}' | cut -d '=' -f 2)ms"
